@@ -90,13 +90,12 @@ def drawtree(rooty):
 drawtree(rooty)
 
     
-text = input("What English text do you want to convert to Morse Code? ")
+text = input("What English text do you want to convert to Morse Code? ").upper()
 morseCode = ""
 
-uppy = text.upper()
-message = uppy.split(" ")
 
-for char in message:
+
+for char in text:
     dotty = []
     tomorse(rooty, char, dotty)
     code = "".join(dotty)
