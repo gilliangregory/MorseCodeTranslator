@@ -42,17 +42,25 @@ rooty.right.left.right.right  = Node("Y")
 rooty.right.right.left.left   = Node("Z")
 rooty.right.right.left.right  = Node("Q")
 
+
 def preorder(rooty):
     if rooty:
         print(rooty.val), #prints data of node
         preorder(rooty.left) 
         preorder(rooty.right)
 
-def inorder(rooty):
-    if rooty:
-        inorder(rooty.left)
-        print(rooty.val),
-        inorder(rooty.right)
+def tomorse(node, char, dotty):
+    if node == None:
+        return False
+    elif node.val == char:
+        return True
+    else:
+        if tomorse(node.left, char, dotty)==True:
+            dotty.insert(0,".")
+            return True
+        elif tomorse(node.right, char, dotty)==True:
+            dotty.insert(0,"-")
+            return True
 
 # Code copied from function drawtree obtained from https://gist.github.com/Liwink/b81e726ad89df8b0754a3a1d0c40d0b4
 def drawtree(rooty):
