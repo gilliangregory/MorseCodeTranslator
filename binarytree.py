@@ -38,12 +38,11 @@ rooty.left.right.right.left  = Node("P")
 rooty.left.right.right.right = Node("J")
 rooty.right.left.left.left   = Node("B")
 rooty.right.left.left.right  = Node("X")
-tree.right.left.right.left  = Node("C")
-tree.right.left.right.right = Node("Y")
-tree.right.right.left.left  = Node("Z")
-tree.right.right.left.right = Node("Q")
+rooty.right.left.right.left  = Node("C")
+rooty.right.left.right.right = Node("Y")
+rooty.right.right.left.left  = Node("Z")
+rooty.right.right.left.right = Node("Q")
 
-<<<<<<< HEAD
 def preorder(rooty):
     if rooty:
         print(rooty.val), #prints data of node
@@ -56,18 +55,4 @@ def inorder(rooty):
         print(rooty.val),
         inorder(rooty.right)
 
-=======
-def preorder(tree):
-    if tree:
-        print(tree.val), #prints data of node
-        preorder(tree.left) 
-        preorder(tree.right)
-
-def inorder(tree):
-    if tree:
-        inorder(tree.left)
-        print(tree.val),
-        inorder(tree.right)
-        
->>>>>>> 6d25e6a26d160b821b4e169634f6bf29c772ac8e
 
