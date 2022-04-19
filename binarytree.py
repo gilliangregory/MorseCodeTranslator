@@ -49,16 +49,16 @@ def preorder(rooty):
         preorder(rooty.left) 
         preorder(rooty.right)
 
-def tomorse(node, char, dotty):
-    if node == None:
+def tomorse(rooty, char, dotty):
+    if rooty == None:
         return False
-    elif node.val == char:
+    elif rooty.val == char:
         return True
     else:
-        if tomorse(node.left, char, dotty)==True:
+        if tomorse(rooty.left, char, dotty)==True:
             dotty.insert(0,".")
             return True
-        elif tomorse(node.right, char, dotty)==True:
+        elif tomorse(rooty.right, char, dotty)==True:
             dotty.insert(0,"-")
             return True
 
@@ -89,3 +89,5 @@ def drawtree(rooty):
 
 if __name__ == '__main__':
     drawtree(rooty)
+
+
