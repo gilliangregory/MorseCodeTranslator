@@ -89,9 +89,27 @@ def drawtree(rooty):
     
 drawtree(rooty)
 
+<<<<<<< HEAD
 #Message we want to change
 message = input("What message do you want to convert into Morse Code? ")
 morse = ""
+=======
+if __name__ == '__main__':
+    drawtree(rooty)
+    
+Text= input("input a text in english characters")
+morsecode= ""
+char = morsecode.split(" ")
+tree= rooty
+for char in text :
+    for symbol in char:
+        if symbol == ".":
+        tree= rooty.left
+        elif symbol == "-":
+        tree= rooty.right
+    letter= tree.value
+    Text= Text + letter 
+>>>>>>> 2fbe02120e022f242ddd5b5a1e1cb8e85e44a9e3
 
 for char in message:
     dotty = []
