@@ -43,6 +43,7 @@ tree.right.left.right.right = Node("Y")
 tree.right.right.left.left  = Node("Z")
 tree.right.right.left.right = Node("Q")
 
+<<<<<<< HEAD
 def preorder(rooty):
     if rooty:
         print(rooty.val), #prints data of node
@@ -55,4 +56,18 @@ def inorder(rooty):
         print(rooty.val),
         inorder(rooty.right)
 
+=======
+def preorder(tree):
+    if tree:
+        print(tree.val), #prints data of node
+        preorder(tree.left) 
+        preorder(tree.right)
+
+def inorder(tree):
+    if tree:
+        inorder(tree.left)
+        print(tree.val),
+        inorder(tree.right)
+        
+>>>>>>> 6d25e6a26d160b821b4e169634f6bf29c772ac8e
 
