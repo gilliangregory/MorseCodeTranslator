@@ -117,19 +117,19 @@ def toeng(morse, rooty):
     reallist = []
     morselist = morse.split(" ")
     tree = rooty
-    while i < len(morselist):
-        while j <= (len(morselist[i]) -1):
+    for i in range(len(morselist)):
+        for j in range(len(morselist[i])):
             if morselist[i][j] == ".":
                 tree= tree.left
             elif morselist[i][j] == "-":
                 tree= tree.right
             else:
                 print("This contains a character that is not an English letter.")
-            j+=1
+            #j+=1
             englist.append(tree)
+        #i+=1
         reallist.append(englist[lenny])
         tree = rooty
-        i+=1
     return reallist
     
 
