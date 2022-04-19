@@ -62,8 +62,7 @@ def tomorse(rooty, char, dotty):
             dotty.insert(0,"-")
             return True
 
-def toeng(rooty, dashy, letters):
-    for i = range    
+ 
 
 # Code copied from function drawtree obtained from https://gist.github.com/Liwink/b81e726ad89df8b0754a3a1d0c40d0b4
 def drawtree(rooty):
@@ -90,7 +89,7 @@ def drawtree(rooty):
     t.hideturtle()
     turtle.mainloop()
     
-drawtree(rooty)
+
 
     
 text = input("What English text do you want to convert to Morse Code? ").upper()
