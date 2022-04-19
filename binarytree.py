@@ -40,3 +40,11 @@ tree.right.left.right.left  = Node("C")
 tree.right.left.right.right = Node("Y")
 tree.right.right.left.left  = Node("Z")
 tree.right.right.left.right = Node("Q")
+
+def preorder(tree):
+    if tree:
+        print(tree.val), #prints data of node
+        preorder(tree.left) 
+        preorder(tree.right)
+
+preorder(tree)
