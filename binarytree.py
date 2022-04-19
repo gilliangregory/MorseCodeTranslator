@@ -89,5 +89,18 @@ def drawtree(rooty):
 
 if __name__ == '__main__':
     drawtree(rooty)
+    
+Text= input("input a text in english characters")
+morsecode= ""
+char = morsecode.split(" ")
+tree= rooty
+for char in text :
+    for symbol in char:
+        if symbol == ".":
+        tree= rooty.left
+        elif symbol == "-":
+        tree= rooty.right
+    letter= tree.value
+    Text= Text + letter 
 
 
