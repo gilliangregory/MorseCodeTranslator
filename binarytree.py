@@ -62,6 +62,8 @@ def tomorse(rooty, char, dotty):
             dotty.insert(0,"-")
             return True
 
+def toeng(rooty, dashy, letters):
+    for i = range    
 
 # Code copied from function drawtree obtained from https://gist.github.com/Liwink/b81e726ad89df8b0754a3a1d0c40d0b4
 def drawtree(rooty):
@@ -103,12 +105,9 @@ for char in text:
 message = input("What message in Morse Code do you want to convert to English? ")
 engCode = ""
 
-for char in message:
-    letters = []
-    engCode = engCode + cody + " "
 
 print(morseCode)
-
+    
 def toeng(morse, rooty):
     i = 0
     j =0
@@ -131,6 +130,4 @@ def toeng(morse, rooty):
         reallist.append(englist[lenny])
         tree = rooty
     return reallist
-    
-
 
