@@ -1,54 +1,58 @@
-
+#please type "pip install binarytree" into the command line to install
+#binarytree package from python
+from binarytree import Node
 class Node:
     def __init__(self,key):
         self.left = None
         self.right = None
         self.val = key
 
-tree = Node("START")
+rooty = Node("START")
 
 #first level of tree
-tree.left  = Node("E")
-tree.right = Node("T")
+rooty.left  = Node("E")
+rooty.right = Node("T")
 
 #second level of tree
-tree.left.left   = Node("I")
-tree.left.right  = Node("A")
-tree.right.left  = Node("N")
-tree.right.right = Node("M")
+rooty.left.left   = Node("I")
+rooty.left.right  = Node("A")
+rooty.right.left  = Node("N")
+rooty.right.right = Node("M")
 
 #third level of tree
-tree.left.left.left    = Node("S")
-tree.left.left.right   = Node("U")
-tree.left.right.left   = Node("R")
-tree.left.right.right  = Node("W")
-tree.right.left.left   = Node("D")
-tree.right.left.right  = Node("K")
-tree.right.right.left  = Node("G")
-tree.right.right.right = Node("O")
+rooty.left.left.left    = Node("S")
+rooty.left.left.right   = Node("U")
+rooty.left.right.left   = Node("R")
+rooty.left.right.right  = Node("W")
+rooty.right.left.left   = Node("D")
+rooty.right.left.right  = Node("K")
+rooty.right.right.left  = Node("G")
+rooty.right.right.right = Node("O")
 
 #fourth level of tree
-tree.left.left.left.left    = Node("H")
-tree.left.left.left.right   = Node("V")
-tree.left.left.right.left   = Node("F")
-tree.left.right.left.left   = Node("L")
-tree.left.right.right.left  = Node("P")
-tree.left.right.right.right = Node("J")
-tree.right.left.left.left   = Node("B")
-tree.right.left.left.right  = Node("X")
+rooty.left.left.left.left    = Node("H")
+rooty.left.left.left.right   = Node("V")
+rooty.left.left.right.left   = Node("F")
+rooty.left.right.left.left   = Node("L")
+rooty.left.right.right.left  = Node("P")
+rooty.left.right.right.right = Node("J")
+rooty.right.left.left.left   = Node("B")
+rooty.right.left.left.right  = Node("X")
 tree.right.left.right.left  = Node("C")
 tree.right.left.right.right = Node("Y")
 tree.right.right.left.left  = Node("Z")
 tree.right.right.left.right = Node("Q")
 
-def preorder(tree):
-    if tree:
-        print(tree.val), #prints data of node
-        preorder(tree.left) 
-        preorder(tree.right)
+def preorder(rooty):
+    if rooty:
+        print(rooty.val), #prints data of node
+        preorder(rooty.left) 
+        preorder(rooty.right)
 
-def inorder(tree):
-    if tree:
-        inorder(tree.left)
-        print(tree.val),
-        inorder(tree.right)
+def inorder(rooty):
+    if rooty:
+        inorder(rooty.left)
+        print(rooty.val),
+        inorder(rooty.right)
+
+
