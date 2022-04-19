@@ -86,8 +86,18 @@ def drawtree(rooty):
     draw(rooty, 0, 30*h, 40*h)
     t.hideturtle()
     turtle.mainloop()
+    
+drawtree(rooty)
 
-if __name__ == '__main__':
-    drawtree(rooty)
+#Message we want to change
+message = input("What message do you want to convert into Morse Code? ")
+morse = ""
 
+for char in message:
+    dotty = []
+    tomorse(rooty, char, dotty)
+    code = "".join(dotty)
+    morse = morse + code + " "
+    
+print(morse)
 
