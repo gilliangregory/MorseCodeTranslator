@@ -47,4 +47,8 @@ def preorder(tree):
         preorder(tree.left) 
         preorder(tree.right)
 
-preorder(tree)
+def inorder(tree):
+    if tree:
+        inorder(tree.left)
+        print(tree.val),
+        inorder(tree.right)
