@@ -110,6 +110,29 @@ for char in message:
     engCode = engCode + cody + " "
 
 print(morseCode)
+
+def toeng(morse, rooty):
+    i = 0
+    j =0
+    englist = []
+    lenny = len(englist) -1
+    reallist = []
+    morselist = morse.split(" ")
+    tree = rooty
+    while i < len(morselist):
+        while j <= (len(morselist[i]) -1):
+            if morselist[i][j] == ".":
+                tree= tree.left
+            elif morselist[i][j] == "-":
+                tree= tree.right
+            else:
+                print("This contains a character that is not an English letter.")
+            j+=1
+            englist.append(tree)
+        reallist.append(englist[lenny])
+        tree = rooty
+        i+=1
+    return reallist
     
 
 
