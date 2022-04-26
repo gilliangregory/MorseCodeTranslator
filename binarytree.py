@@ -115,18 +115,52 @@ def toeng(morse, rooty):
     reallist = []
     morselist = morse.split(" ")
     tree = rooty
+    stringlist = ""
     for i in range(len(morselist)):
         for j in range(len(morselist[i])):
             if morselist[i][j] == ".":
-                tree= tree.left
+                if hasattr(tree, 'left'):
+                    tree= tree.left
+                else:
+                    print("This contains a character that is not an English letter.")
+                    break
             elif morselist[i][j] == "-":
-                tree= tree.right
+                if hasattr(tree, 'right'):
+                    tree= tree.right
+                else:
+                    print("This contains a character that is not an English letter.")
+                    break
             else:
-                print("This contains a character that is not an English letter.")
-            #j+=1
+                print("This contains a character that is not in Morse Code.")
+                break
             englist.append(tree)
-        #i+=1
-        reallist.append(englist[lenny])
+        if len(englist) > 0:    
+            reallist.append(englist[lenny])
         tree = rooty
-    return reallist
+    
+    for m in range(len(reallist)):
+        for n in range(len(str(reallist[m]))):
+            if str(reallist[m])[n] == "(":
+                stringlist += str(reallist[m])[n+1]
+    return stringlist
+
+
+
+#please install winsound and turn your volume up.
+#(note: winsound and this function will only work on Windows.)
+#def beep(eng):
+#    import winsound
+
+ #   beeps = tomorse(eng)
+ #   beeplist = list(beeps)
+ #   for elem in beeplist:
+ #       for char in elem:
+ #           if char == ".":
+ #               winsound.Beep(440, 1000)
+ #           if char == "-":
+ #               winsound.Beep(440, 3000)
+ #           time.sleep(1)
+ #       time.sleep(6)
+ #   return
+
 
