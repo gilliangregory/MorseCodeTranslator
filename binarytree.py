@@ -92,20 +92,20 @@ def drawtree(rooty):
 
 
     
-text = input("What English text do you want to convert to Morse Code? ").upper()
-morseCode = ""
+#text = input("What English text do you want to convert to Morse Code? ").upper()
+#morseCode = ""
 
-for char in text:
-    dotty = []
-    tomorse(rooty, char, dotty)
-    code = "".join(dotty)
-    morseCode = morseCode + code + " "
+#for char in text:
+    #dotty = []
+    #tomorse(rooty, char, dotty)
+    #code = "".join(dotty)
+    #morseCode = morseCode + code + " "
 
-message = input("What message in Morse Code do you want to convert to English? ")
-engCode = ""
+#message = input("What message in Morse Code do you want to convert to English? ")
+#engCode = ""
 
 
-print(morseCode)
+
     
 def toeng(morse, rooty):
     i = 0

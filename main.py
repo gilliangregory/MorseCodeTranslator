@@ -11,7 +11,7 @@ Select how you want to proceed:
 |2| Encode from English to Morse Code
 |3| Decode from Morse Code to English""")
 
-def display_morsecode(option, rooty, morseCode, message=""):
+def display_morsecode(option, rooty, whatever):
 
 #INPUT OPTION 1 PRINTING   
     if option == "1":
@@ -22,12 +22,13 @@ def display_morsecode(option, rooty, morseCode, message=""):
 #INPUT OPTION 2 PRINTING
     if option == "2":
         print("~" * 60)
-        print(morseCode)
+        print(whatever)
         print("~" * 60)
         
 #INPUT OPTION 3 PRINTING
     if option == "3":
         print("~" * 60)
+        print(whatever)
         print("~" * 60)
         
 def process_selection(user_input, option):
@@ -46,8 +47,14 @@ def process_selection(user_input, option):
             tomorse(rooty, char, dotty)
             code = "".join(dotty)
             morseCode = morseCode + code + " "
-            return morseCode
+        return morseCode
 
+#INPUT OPTION 3 PROCESSING
+    elif option == "3":
+        morse = user_input
+
+        message = toeng(morse, rooty)
+        return message
 
 def main():
     while True:
@@ -86,7 +93,8 @@ def main():
                     elif user_input == "exit":
                         exit()
 
-                    display_morsecode("2",morseCode)
+                    morsey = process_selection(user_input, "2")
+                    display_morsecode("2", rooty, morsey)
 
 #USER SELECTS INPUT OPTION 3
                 if selection in ["3", "decode"]:
@@ -99,7 +107,8 @@ def main():
                     elif user_input == "exit":
                         exit()
 
-                    display_morsecode("3",message)
+                    englo = process_selection(user_input, "3")
+                    display_morsecode("3", rooty, englo)
 
         elif selection == "exit":
                 exit()
