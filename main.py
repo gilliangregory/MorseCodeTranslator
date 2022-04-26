@@ -12,6 +12,7 @@ Select how you want to proceed:
 |3| Decode from Morse Code to English""")
 
 def display_morsecode(option, rooty, whatever):
+    #whatever is either the morseCode encoding or English decoding that is done in process_selection
 
 #INPUT OPTION 1 PRINTING   
     if option == "1":
