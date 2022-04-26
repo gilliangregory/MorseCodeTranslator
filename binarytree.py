@@ -94,7 +94,6 @@ def drawtree(rooty):
 
 
 
-    
 def toeng(morse, rooty):
     i = 0
     j =0
@@ -106,6 +105,7 @@ def toeng(morse, rooty):
     stringlist = ""
     for i in range(len(morselist)):
         for j in range(len(morselist[i])):
+            
             if morselist[i][j] == ".":
                 if hasattr(tree, 'left'):
                     tree= tree.left
@@ -118,20 +118,25 @@ def toeng(morse, rooty):
                 else:
                     print("This contains a character that is not an English letter.")
                     break
+            elif morselist[i][j] == ",":
+                englist.append(" ")
+                break
             else:
                 print("This contains a character that is not in Morse Code.")
                 break
             englist.append(tree)
-        if len(englist) > 0:    
-            reallist.append(englist[lenny])
+        if len(englist) > 0:
+            reallist.append(englist[len(englist) -1])
         tree = rooty
     
     for m in range(len(reallist)):
         for n in range(len(str(reallist[m]))):
             if str(reallist[m])[n] == "(":
                 stringlist += str(reallist[m])[n+1]
+                #stringlist += " "
+        if str(reallist[m]) == " ":
+            stringlist += " "
     return stringlist
-
 
 
 #please install winsound and turn your volume up.
