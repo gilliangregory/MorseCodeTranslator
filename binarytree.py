@@ -173,19 +173,21 @@ def toeng(morse, rooty):
 
 #please install winsound and turn your volume up.
 #(note: winsound and this function will only work on Windows.)
-#def beep(eng):
-#    import winsound
+def beep(eng):
+    import winsound
 
- #   beeps = tomorse(eng)
- #   beeplist = list(beeps)
- #   for elem in beeplist:
- #       for char in elem:
- #           if char == ".":
- #               winsound.Beep(440, 1000)
- #           if char == "-":
- #               winsound.Beep(440, 3000)
- #           time.sleep(1)
- #       time.sleep(6)
- #   return
+    beeps = tomorse(eng)
+    beeplist = list(beeps)
+    for elem in beeplist:
+        for char in elem:
+            if char == ".":
+                winsound.Beep(440, 1000)
+            if char == "-":
+                winsound.Beep(440, 3000)
+        for time in range(1):
+            winsound.sleep(1)
+    for time2 in range(6):
+        winsound.sleep(6)
+    return
 
 
