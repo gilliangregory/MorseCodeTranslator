@@ -93,6 +93,7 @@ def tomorse(rooty, char, dotty):
         elif tomorse(rooty.right, char, dotty)==True:
             dotty.insert(0,"-")
             return True
+        return dotty
 
  
 
