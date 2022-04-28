@@ -41,6 +41,38 @@ rooty.right.left.right.left   = Node("C")
 rooty.right.left.right.right  = Node("Y")
 rooty.right.right.left.left   = Node("Z")
 rooty.right.right.left.right  = Node("Q")
+rooty.left.left.right.right   = Node("Ü")
+rooty.left.right.left.right   = Node("Ä")
+rooty.right.right.right.left  = Node("Ö")
+rooty.right.right.right.right = Node("x")
+
+
+#fifth level of tree
+rooty.left.left.left.left.left      = Node("5")
+rooty.left.left.left.left.right     = Node("4")
+rooty.left.left.right.right.right   = Node("2")
+rooty.left.left.left.right.right    = Node("3")
+rooty.left.right.left.right.left    = Node("+")
+rooty.left.left.right.right.left    = Node("ð")
+rooty.left.right.right.left.right   = Node("À")
+rooty.left.right.right.right.right  = Node("1")
+rooty.right.left.left.left.left     = Node("6")
+rooty.right.left.right.left.right   = Node("")
+rooty.right.right.left.left.left    = Node("7")
+rooty.right.right.left.left.right   = Node("")
+rooty.right.right.left.right.right  = Node("Ñ")
+rooty.right.right.right.left.left   = Node("8")
+rooty.right.right.right.right.left  = Node("9")
+rooty.right.right.right.right.right = Node("0") 
+
+#Sixth level of tree
+rooty.left.left.right.right.left.left   = Node("?")
+rooty.left.right.left.right.left.right  = Node(".")
+rooty.left.right.right.left.right.left  = Node("@")
+rooty.right.left.left.left.left.right   = Node("-")
+rooty.right.left.right.left.right.left  = Node(";")
+rooty.right.right.left.left.right.right = Node(",")
+rooty.right.right.right.left.left.left  = Node(":")
 
 
 def preorder(rooty):
