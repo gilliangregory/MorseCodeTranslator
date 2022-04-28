@@ -81,7 +81,7 @@ def main():
                     elif user_input == "exit":
                         exit()
 
-                    display_morsecode("1", rooty)
+                    display_morsecode("1", rooty, "")
 
 #USER SELECTS INPUT OPTION 2
                 if selection in ["2", "encode"]:
