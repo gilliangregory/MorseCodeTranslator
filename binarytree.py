@@ -123,9 +123,7 @@ def drawtree(rooty):
     
 
 
-
-
-
+    
 def toeng(morse, rooty):
     i = 0
     j =0
