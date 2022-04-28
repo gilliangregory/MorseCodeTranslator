@@ -99,7 +99,7 @@ def main():
 
 #USER SELECTS INPUT OPTION 3
                 if selection in ["3", "decode"]:
-                    print("\nWhat message do you want to decode from Morse Code to English? ")
+                    print("\nWhat message do you want to decode from Morse Code to English? /n Please follow each letter with a space and each word with a comma.")
                     user_input = get_input()
 
                     if user_input == "back":
