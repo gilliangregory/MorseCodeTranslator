@@ -95,6 +95,7 @@ def tomorse(rooty, char, dotty):
         elif tomorse(rooty.right, char, dotty)==True:
             dotty.insert(0,"-")
             return True
+        return dotty
 
     return dotty
 
@@ -127,9 +128,7 @@ def drawtree(rooty):
     
 
 
-
-
-
+    
 def toeng(morse, rooty):
     i = 0
     j =0
