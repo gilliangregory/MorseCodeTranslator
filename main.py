@@ -1,5 +1,5 @@
-import winsound
-import time
+#import winsound
+#import time
 from binarytree import *
 ERROR = "~~~ INVALID INPUT! PLEASE TRY AGAIN! ~~~"
 def get_input()-> str:
@@ -35,7 +35,7 @@ def display_morsecode(option, rooty, whatever):
         print(whatever)
         print("~" * 60)
 
-#INPUT OPTION $ PRINTING
+#INPUT OPTION 4 PRINTING
     if option == "4":
         print("~" * 60)
         print(whatever)
@@ -65,14 +65,14 @@ def process_selection(user_input, option):
 
         message = toeng(morse, rooty)
         return message
-#INPUT OPTION 4 PROCESSING
-    elif option == "4":
-        input = user_input.upper()
-        beep(input)
+#INPUT OPTION 4 PROCESSING ONLY WORKS ON WINDOWS 
+   # elif option == "4":
+    #    input = user_input.upper()
+      #  beep(input)
 
 def main():
-    import winsound
-    import time
+   # import winsound
+    #import time
     while True:
         display_options()
         selection = get_input()
@@ -126,23 +126,26 @@ def main():
                     englo = process_selection(user_input, "3")
                     display_morsecode("3", rooty, englo)
 
-                elif selection in ["4", "encode"]:
-                    print("What message would you like to hear in Morse code?")
-                    user_input = get_input()
 
-                    if user_input == "back":
-                        break
-                    elif user_input == "exit":
-                        exit()
-                    else:
-                        import winsound
-                        beep(user_input.upper())
-        elif selection == "exit":
-                exit()
-        else:
-            print("Invalid selection. Please try again.")
+# THIS SECTION ONLY WORKS ON WINDOWS COMPUTERS
+ #               elif selection in ["4", "encode"]:
+ #                   print("What message would you like to hear in Morse code?")
+ #                   user_input = get_input()
+#
+ #                   if user_input == "back":
+ #                       break
+  #                  elif user_input == "exit":
+  #                      exit()
+   #                 else:
+    #                    import winsound
+    #                    beep(user_input.upper())
+     #   elif selection == "exit":
+     #           exit()
+      #  else:
+       #     print("Invalid selection. Please try again.")
 
 if __name__ == "__main__":
-    import winsound
-    import time
+    #The next two things only work on windows
+ #   import winsound
+  #  import time
     main()
