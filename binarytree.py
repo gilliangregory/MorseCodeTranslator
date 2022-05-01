@@ -100,7 +100,12 @@ def tomorse(rooty, char, dotty):
 
  
 
-# Code copied from function drawtree obtained from https://gist.github.com/Liwink/b81e726ad89df8b0754a3a1d0c40d0b4
+
+#Title: drawtree.py
+#Author: Yihe Liu
+#Date: May 8, 2018
+#Code version: version 50
+#Availability: https://gist.github.com/Liwink/b81e726ad89df8b0754a3a1d0c40d0b4
 def drawtree(rooty):
     def height(rooty):
         return 1 + max(height(rooty.left), height(rooty.right)) if rooty else -1
