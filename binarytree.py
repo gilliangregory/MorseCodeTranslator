@@ -1,3 +1,4 @@
+import time
 class Node:
     def __init__(self,key):
         self.left = None
@@ -90,9 +91,12 @@ def tomorse(rooty, char, dotty):
         if tomorse(rooty.left, char, dotty)==True:
             dotty.insert(0,".")
             return True
+
         elif tomorse(rooty.right, char, dotty)==True:
             dotty.insert(0,"-")
             return True
+
+    return dotty
 
  
 
@@ -168,22 +172,66 @@ def toeng(morse, rooty):
             stringlist += " "
     return stringlist
 
+def dot(char):
+    import winsound
+    import time
+    for x in char:
+        if char == ".":
+            winsound.Beep(440, 1000)
+            print(" ")
+            time.sleep(1)
 
-#please install winsound and turn your volume up.
-#(note: winsound and this function will only work on Windows.)
-#def beep(eng):
-#    import winsound
+    return
 
- #   beeps = tomorse(eng)
- #   beeplist = list(beeps)
- #   for elem in beeplist:
- #       for char in elem:
- #           if char == ".":
- #               winsound.Beep(440, 1000)
- #           if char == "-":
- #               winsound.Beep(440, 3000)
- #           time.sleep(1)
- #       time.sleep(6)
- #   return
+def dash(char):
+    import winsound
+    import time
+    for x in char:
+        if char == "-":
+            winsound.Beep(440, 3000)
+            print(" ")
+            time.sleep(1)
+        break
+    return
+
+def space(char):
+    import time
+    for x in char:
+        if char == " ":
+            print(" ")
+            time.sleep(3)
+        break
+    return
 
 
+#note: winsound and this function will only work on Windows.
+def beep(eng):
+    import time
+    import winsound
+    dotty = []
+    tomorse(rooty, eng, dotty)
+    morseCode = ""
+    for char in eng:
+        dotty = []
+        tomorse(rooty, char, dotty)
+        code = "".join(dotty)
+        morseCode = morseCode + code + " "
+    print("Listen carefully!")
+    for j in range(0, len(morseCode)):
+        elem = morseCode[j]
+        if morseCode[j] == ".":
+            dot(elem)
+            continue
+        elif elem == "-":
+            dash(elem)
+            continue
+        elif elem == " ":
+            space(elem)
+            continue
+        else:
+            continue
+    return
+
+if __name__ == '__main__':
+    import winsound
+    beep("NELLO")
